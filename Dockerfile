@@ -1,6 +1,6 @@
 FROM zilliqa/scilla:latest
 
-ARG DEPLOY_ENV = "dev"
+ARG DEPLOY_ENV="dev"
 
 # Install node.js
 RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
