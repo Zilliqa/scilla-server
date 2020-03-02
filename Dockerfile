@@ -1,6 +1,6 @@
 FROM zilliqa/scilla:latest
 
-EXPOSE 8080
+ARG DEPLOY_ENV = "dev"
 
 # Install node.js
 RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
@@ -12,4 +12,8 @@ WORKDIR /scilla-server
 RUN npm install
 RUN npm run build
 
-ENTRYPOINT NODE_ENV=production SCILLA_VERSION=0 npm run start
+EXPOSE 4000
+
+ENV DEPLOY_ENV=${DEPLOY_ENV}
+ENTRYPOINT ["sh", "run_server.sh"]
+#ENTRYPOINT NODE_ENV=production SCILLA_VERSION=0 npm run start
