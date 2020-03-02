@@ -46,6 +46,12 @@ if (process.env.NODE_ENV === 'development') {
   app.use(errorHandler());
 }
 
+app.get('/healthcheck', (req: any, res: any) => {
+  return res.send({
+    status: 'running'
+  });
+});
+
 app.post('/contract/check', wrapAsync(check));
 app.post('/contract/call', wrapAsync(run));
 
