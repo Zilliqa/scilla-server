@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Environment is $DEPLOY_ENV"
 if [ "$DEPLOY_ENV" = "dev" ]; then
