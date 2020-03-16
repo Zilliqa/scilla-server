@@ -1,4 +1,4 @@
-FROM zilliqa/scilla:v0.5.2
+FROM zilliqa/scilla:v0.6.0
 
 ARG DEPLOY_ENV="dev"
 
