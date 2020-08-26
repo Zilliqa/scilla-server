@@ -115,6 +115,7 @@ export const checker = async (opts: BaseOpt) => {
       '-gaslimit',
       '80000',
       '-jsonerrors',
+      '-typeinfo',
       opts.code,
     ]);
 
