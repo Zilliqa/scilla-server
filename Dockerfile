@@ -1,4 +1,4 @@
-FROM zilliqa/scilla:v0.9.1
+FROM zilliqa/scilla:polynetwork_cc3dcb2
 
 ARG DEPLOY_ENV="dev"
 
